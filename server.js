@@ -155,8 +155,8 @@ app.post ('/getUser', async (req, res) => {
 //   res.send('Hey')
 // })
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client/src/index.html'), function(err) {
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/src/index.js'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
