@@ -152,7 +152,7 @@ app.post ('/getUser', async (req, res) => {
 //   res.send("hey")
 // })
 app.get("/",async(req,res)=>{
-  res.send('SignInPage.js')
+  res.send('Hey')
 })
 
 app.get ('/health', async (req, res) => {
