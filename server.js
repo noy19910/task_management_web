@@ -6,11 +6,11 @@ app.use (cors ());
 app.use (express.json ());
 const pool = require ('./config');
 
-// const publicPath = path.join(__dirname, '..', 'public');//13-07
+const publicPath = path.join(__dirname, '..', 'client/src/Pages');//13-07
 
-// app.get('/signIn', (req, res) => {
-//   res.sendFile(path.join(publicPath, 'SignInPage.js'));//13-07
-// });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(publicPath, 'SignInPage.js'));//13-07
+});
 
 app.post ('/updateTask', async (req, res) => {
   try {
@@ -148,12 +148,12 @@ app.post ('/getUser', async (req, res) => {
     console.log (error);
   }
 });
-app.get("/favicon.ico",async(req,res)=>{
-  res.send("hey")
-})
-app.get("/",async(req,res)=>{
-  res.send("hey")
-})
+// app.get("/favicon.ico",async(req,res)=>{
+//   res.send("hey")
+// })
+// app.get("/",async(req,res)=>{
+//   res.send("hey")
+// })
 app.get ('/health', async (req, res) => {
   try {
     res.send ('ok');
