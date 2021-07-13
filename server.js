@@ -151,9 +151,17 @@ app.post ('/getUser', async (req, res) => {
 // app.get("/favicon.ico",async(req,res)=>{
 //   res.send("hey")
 // })
-app.get("/",async(req,res)=>{
-  res.send('Hey')
-})
+// app.get("/",async(req,res)=>{
+//   res.send('Hey')
+// })
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/src/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+
 
 app.get ('/health', async (req, res) => {
   try {
