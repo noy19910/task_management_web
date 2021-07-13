@@ -142,6 +142,12 @@ app.post ('/getUser', async (req, res) => {
     console.log (error);
   }
 });
+app.get("/favicon.ico",async(req,res)=>{
+  res.redirect("/");
+})
+app.get("/",async(req,res)=>{
+  res.redirect("/");
+})
 app.get ('/health', async (req, res) => {
   try {
     res.send ('ok');
