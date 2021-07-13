@@ -33,8 +33,9 @@
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.10"
   },
+  
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -58,3 +59,4 @@
     ]
   }
 }
+

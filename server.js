@@ -6,11 +6,11 @@ app.use (cors ());
 app.use (express.json ());
 const pool = require ('./config');
 
-const publicPath = path.join(__dirname, '..', 'public');//13-07
+// const publicPath = path.join(__dirname, '..', 'public');//13-07
 
-app.get('/signIn', (req, res) => {
-  res.sendFile(path.join(publicPath, 'SignInPage.js'));//13-07
-});
+// app.get('/signIn', (req, res) => {
+//   res.sendFile(path.join(publicPath, 'SignInPage.js'));//13-07
+// });
 
 app.post ('/updateTask', async (req, res) => {
   try {
